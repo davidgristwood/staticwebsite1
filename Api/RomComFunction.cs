@@ -11,7 +11,6 @@ using Newtonsoft.Json;
 using Microsoft.Extensions.ML;
 using Microsoft.ML;
 using Microsoft.ML.Data;
-using Microsoft.ML.Transforms.Onnx;
 using BlazorApp;
 
 namespace BlazorApp.Api
@@ -28,7 +27,7 @@ namespace BlazorApp.Api
         public string[] output_label { get; set; }
 
         [ColumnName("output_probability")]
-        [OnnxSequenceType(typeof(IDictionary<string, float>))]
+        //[OnnxSequenceType(typeof(IDictionary<string, float>))]
         public IEnumerable<IDictionary<string, float>> output_probability { get; set; }
     }
 
